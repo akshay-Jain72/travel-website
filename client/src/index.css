@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/* Global Color & Design Variables */
+:root {
+  --primary: #ff7800;
+  --dark: #222;
+  --text: #444;
+  --light-text: #666;
+  --white: #fff;
+  --light-bg: #f7f7f7;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.12);
+  --shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+}
+html {
+  /* Minimum font size 10px fix kar di hai taaki zoom out hone par layout collapse na ho */
+  font-size: clamp(10px, 0.625vw + 6px, 16px);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+body {
+  background: var(--white);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Max Container Width for Ultra-Wide Desktop Screens */
+/* Naya Updated Code */
+section {
+  padding: 5rem 9%;
+  width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* Common Global Button Component */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 2.6rem;
+  border: 0.2rem solid var(--primary);
+  background: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+.btn:hover {
+  background: rgba(255, 120, 0, 0.12);
+  color: var(--primary);
+}
+
+/* Section Headings Style */
+.heading {
+  padding-bottom: 3rem;
+  color: var(--dark);
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading span {
+  display: inline-block;
+  margin: 0.15rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 120, 0, 0.15);
+  color: var(--primary);
+}
+
+.heading .space {
+  background: none;
+  padding: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%; /* 1rem = 8.8px */
+  }
+  section {
+    padding: 4rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 3rem 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+}
+
+@media (max-width: 450px) {
+  section {
+    padding: 3rem 2%;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  .heading span {
+    padding: 0.2rem 0.5rem;
+  }
+}

@@ -1,0 +1,30 @@
+.brand-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: #f7f7f7;
+}
+
+.brand-container .brand-slider {
+  padding: 1rem 0;
+}
+
+.brand-container .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-container .swiper-slide img {
+  width: 100%;
+  max-width: 15rem;
+  height: 8rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.65;
+}
+
+.brand-container .swiper-slide img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
+}

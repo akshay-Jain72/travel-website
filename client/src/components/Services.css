@@ -1,0 +1,40 @@
+.services {
+  background: #f7f7f7;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.8rem;
+}
+
+.services .box-container .box {
+  padding: 3rem 2rem;
+  border-radius: 0.6rem;
+  background: #fff;
+  text-align: center;
+}
+
+.services .box-container .box:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-0.5rem);
+}
+
+.services .box-container .box i {
+  color: var(--primary);
+  font-size: 5rem;
+}
+
+.services .box-container .box h3 {
+  padding-top: 1.5rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+.services .box-container .box p {
+  padding-top: 1rem;
+  color: #666;
+  font-size: 1.45rem;
+  line-height: 1.7;
+  text-transform: none;
+}

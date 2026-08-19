@@ -1,0 +1,51 @@
+.review {
+  background: #f7f7f7;
+}
+
+.review .review-slider {
+  padding: 1rem 0 3rem;
+}
+
+.review .swiper-slide {
+  height: auto;
+}
+
+.review .box {
+  height: 100%;
+  padding: 2.5rem 2rem;
+  border-radius: 0.6rem;
+  background: #fff;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.review .box img {
+  width: 11rem;
+  height: 11rem;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--primary);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box h3 {
+  color: #333;
+  font-size: 2rem;
+}
+
+.review .box p {
+  padding: 1rem 0;
+  color: #666;
+  font-size: 1.45rem;
+  line-height: 1.7;
+  text-transform: none;
+}
+
+.review .box .stars i {
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.review .swiper-pagination-bullet-active {
+  background: var(--primary);
+}

@@ -1,0 +1,80 @@
+/* Layout Fix - Container for Side-by-Side Display */
+.book-flex-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 3rem !important;
+  width: 100% !important;
+}
+
+/* Image Box - Left Side */
+.book-image-box {
+  flex: 1 1 45rem !important;
+  width: 50% !important;
+}
+
+.book-image-box img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 45rem !important;
+  object-fit: cover !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Form Box - Right Side */
+.book-form-box {
+  flex: 1 1 45rem !important;
+  width: 50% !important;
+  padding: 2.5rem !important;
+  background: #ffffff !important;
+  box-shadow: var(--shadow, 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1)) !important;
+  border: var(--border, 0.1rem solid rgba(0, 0, 0, 0.12)) !important;
+  border-radius: 0.5rem !important;
+}
+
+.book-form-box .inputBox {
+  padding: 0.5rem 0 !important;
+}
+
+.book-form-box .inputBox h3 {
+  font-size: 1.6rem !important;
+  color: var(--dark, #222) !important;
+  padding: 0.4rem 0 !important;
+  text-transform: capitalize !important;
+}
+
+.book-form-box .inputBox input {
+  width: 100% !important;
+  padding: 1.1rem !important;
+  margin: 0.4rem 0 !important;
+  border: var(--border, 0.1rem solid rgba(0, 0, 0, 0.12)) !important;
+  font-size: 1.5rem !important;
+  color: var(--text, #444) !important;
+  border-radius: 0.5rem !important;
+  background: var(--light-bg, #f7f7f7) !important;
+}
+
+.book-form-box .inputBox input:focus {
+  border-color: var(--primary, #ff7800) !important;
+  background: #ffffff !important;
+}
+
+.book-form-box .btn {
+  width: 100% !important;
+  text-align: center !important;
+  border-radius: 0.5rem !important;
+  margin-top: 1rem !important;
+}
+
+/* Mobile Screen Breakpoint */
+@media (max-width: 768px) {
+  .book-flex-container {
+    flex-direction: column !important;
+  }
+  
+  .book-image-box,
+  .book-form-box {
+    width: 100% !important;
+  }
+}
