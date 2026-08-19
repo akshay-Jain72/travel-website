@@ -1,10 +1,10 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen, toggleSidebar, setShowForm }) => {
   return (
     <>
-      {/* Background Overlay (Mobile/Tablet view ke liye) */}
+      {/* Background Overlay */}
       <div 
         className={`sidebar-overlay ${isOpen ? 'active' : ''}`} 
         onClick={toggleSidebar}
@@ -22,37 +22,37 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
         <ul className="sidebar-links">
           <li>
-            <a href="#home">
+            <a href="#home" onClick={toggleSidebar}>
               <i className="fas fa-home"></i>
               <span>Home</span>
             </a>
           </li>
           <li>
-            <a href="#book">
+            <a href="#book" onClick={toggleSidebar}>
               <i className="fas fa-book"></i>
               <span>Book</span>
             </a>
           </li>
           <li>
-            <a href="#packages">
+            <a href="#packages" onClick={toggleSidebar}>
               <i className="fas fa-globe"></i>
               <span>Packages</span>
             </a>
           </li>
           <li>
-            <a href="#services">
+            <a href="#services" onClick={toggleSidebar}>
               <i className="fas fa-concierge-bell"></i>
               <span>Services</span>
             </a>
           </li>
           <li>
-            <a href="#gallery">
+            <a href="#gallery" onClick={toggleSidebar}>
               <i className="fas fa-images"></i>
               <span>Gallery</span>
             </a>
           </li>
           <li>
-            <a href="#contact">
+            <a href="#contact" onClick={toggleSidebar}>
               <i className="fas fa-envelope"></i>
               <span>Contact</span>
             </a>
@@ -60,7 +60,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </ul>
 
         <div className="sidebar-footer">
-          <button className="btn-login">Login</button>
+          {/* 👇 Yahan click par login form khulega aur sidebar band hogi */}
+          <button 
+            className="btn-login" 
+            onClick={() => {
+              setShowForm(true);
+              toggleSidebar();
+            }}
+          >
+            Login
+          </button>
         </div>
       </aside>
     </>

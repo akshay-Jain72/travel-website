@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 /* Background Overlay */
 .sidebar-overlay {
   position: fixed;
@@ -31,17 +24,17 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -280px;
-  width: 280px;
+  left: -300px;
+  width: 290px;
   height: 100%;
   background: #ffffff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
-  transition: left 0.3s ease-in-out;
+  padding: 1.8rem 1.5rem;
+  transition: left 0.35s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .sidebar.open {
@@ -53,15 +46,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
   border-bottom: 1px solid #eee;
 }
 
 .sidebar-header .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1.4rem;
+  gap: 0.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #333;
 }
@@ -71,7 +64,7 @@
 }
 
 .sidebar-header .close-btn {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #666;
   cursor: pointer;
   transition: color 0.2s;
@@ -84,56 +77,58 @@
 /* Links List */
 .sidebar-links {
   list-style: none;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   flex-grow: 1;
 }
 
 .sidebar-links li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .sidebar-links a {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  color: #555;
+  gap: 1.1rem;
+  padding: 0.9rem 1rem;
+  color: #444;
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 500;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
+  border-radius: 0.6rem;
+  transition: all 0.25s ease;
 }
 
 .sidebar-links a i {
-  font-size: 1.2rem;
-  color: #888;
-  transition: color 0.2s ease;
+  font-size: 1.25rem;
+  color: #ffa500;
+  transition: transform 0.25s ease;
 }
 
 .sidebar-links a:hover {
   background: #fff5e6;
   color: #ffa500;
+  padding-left: 1.2rem;
 }
 
 .sidebar-links a:hover i {
-  color: #ffa500;
+  transform: scale(1.1);
 }
 
 /* Footer Button */
 .sidebar-footer .btn-login {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   background: #ffa500;
   color: #fff;
   border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  border-radius: 0.6rem;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
 .sidebar-footer .btn-login:hover {
-  background: #333;
+  background: #e59400;
+  transform: translateY(-2px);
 }

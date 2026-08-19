@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const User = require('./models/User');
 const mongoose = require('mongoose');
 
 // Models Import
@@ -31,6 +32,27 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+app.post('/api/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    let user = await User.findOne({ email });
+
+    if (!user) {
+      user = new User({ email, password });
+      await user.save();
+      return res.status(201).json({ success: true, message: 'User registered and saved to Atlas!' });
+    }
+
+    if (user.password !== password) {
+      return res.status(400).json({ success: false, message: 'Invalid password!' });
+    }
+
+    res.status(200).json({ success: true, message: 'Login successful!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
 // Booking Route
 app.post('/api/book', async (req, res) => {
   try {

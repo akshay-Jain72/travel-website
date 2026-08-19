@@ -21,8 +21,11 @@ const Header = ({ setShowForm, toggleSidebar }) => {
       </nav>
 
       <div className="icons">
-        <i className="fas fa-search" id="search-btn"></i>
-        <i className="fas fa-user" id="login-btn" onClick={() => setShowForm(true)}></i>
+        {/* Desktop ke liye professional Login Button (Search icon yahan se hata diya gaya hai) */}
+        <div className="login-btn-container" onClick={() => setShowForm(true)}>
+          <i className="fas fa-user" id="login-btn"></i>
+          <span>Login</span>
+        </div>
       </div>
     </header>
   );
