@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="box-container">
         <div className="box">
           <h3>about us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dicta!</p>
+          <p>Discover the world with us! We provide unforgettable travel experiences, customized tour packages, and seamless booking services to make your dream vacation a reality.</p>
         </div>
 
         <div className="box">
